@@ -11,4 +11,8 @@
 		register_nav_menu('main', 'Main menu of page');
 	}
 	add_action('init', 'js_theme_setup');
+
+	add_theme_support('custom-header');
+	add_theme_support('post-thumbnails');
+	add_theme_support('post-formats', array('aside','image','video'));
 	
