@@ -1,6 +1,14 @@
 <?php
 	function js_portfolio(){
+		//css
+		wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '4.0', 'all');
 		wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/style.css', array(), '1.0', 'all');
+		
+		//js
+		wp_deregister_script('jquery');
+		wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), null, true);
+		wp_enqueue_script('popperjs', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array(), '1.29', true);
+		wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.0', true);
 		wp_enqueue_script('customjs', get_template_directory_uri() . '/js/index.js', array(), '1.0', true);
 	}
 	add_action('wp_enqueue_scripts', 'js_portfolio');
