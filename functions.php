@@ -1,8 +1,8 @@
 <?php
 	function js_portfolio(){
 		//css
-		wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '4.0', 'all');
-		wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/style.css', array(), '1.0', 'all');
+		//wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '4.0', 'all');
+		wp_enqueue_style('customstyle', get_template_directory_uri() . '/styles/css/app.css', array(), '1.0', 'all');
 		
 		//js
 		wp_deregister_script('jquery');
