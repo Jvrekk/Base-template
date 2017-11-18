@@ -34,23 +34,18 @@ endif; ?>
 						<span class="navbar-toggler-icon"></span>
 					  </button>
 					  <div class="collapse navbar-collapse" id="navbarNav">
-						<ul class="navbar-nav">
-						  <li class="nav-item active">
-							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" href="#">Features</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" href="#">Pricing</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link disabled" href="#">Disabled</a>
-						  </li>
-						</ul>
+						  <?php wp_nav_menu( array(
+								'theme_location' => 'main', // Defined when registering the menu
+								'menu_id'        => 'primary-menu',
+								'container'      => false,
+								'depth'          => 2,
+								'menu_class'     => 'navbar-nav',
+								'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
+								'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
+							) );
+						  ?>
 					  </div>
 					</nav>
-					<?php wp_nav_menu(); ?>
 				</div>
 			</div>
 		
