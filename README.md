@@ -1,2 +1,2 @@
 # Portfolio
-Creating my own portfolio page theme based on wordpress cms
+Creating my own base template theme based on wordpress and bootstrap cms
